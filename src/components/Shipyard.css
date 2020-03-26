@@ -1,0 +1,20 @@
+.shipyard{
+    display: inline-block;
+}
+
+.shipyard .row{
+    height: 106px;
+    display: flex;
+}
+
+.player.inactive .shipyard .row{
+    height: 60px;
+}
+
+.shipyard .card.selected{
+    margin-top: -8px;
+    margin-bottom: -8px;
+    margin-right: -4px;
+    margin-left: -4px;
+    z-index: 999;
+}

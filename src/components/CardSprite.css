@@ -1,0 +1,48 @@
+.card{
+    /* border: 1px solid #333; */
+    border-radius: 10px;
+    width: 100px;
+    height: 151px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    transition: .2s ease;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0 0 1px #333);
+}
+
+.card.selectable{
+    cursor: pointer;
+}
+
+.card.selected{
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.55);
+    margin-top: 0px;
+    margin-bottom: -8px;
+}
+
+.card.small{
+    width: 70px;
+    height: 105px;
+}
+
+.card.small.selected{
+    width: 80px;
+    height: 120px;
+}
+
+.card.large{
+    width: 150px;
+    height: 226px;
+}
+
+.player.inactive .card{
+    width: 40px;
+    height: 60px;
+}
+
+.card.horizontal{
+    transform: rotate(90deg);
+}
