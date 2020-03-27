@@ -6,12 +6,13 @@ import { ShipYard } from './Shipyard'
 import { Action, BuyBoatAction, GiveCardsAction, EndTurnAction } from '../game/model/Actions'
 import { playCannon, playHoNo } from '../game/Sounds'
 
-export const PlayerBoard = ({ player, playerTurn, selectedCards, setSelectedCards, dispatch } : {
+export const PlayerBoard = ({ player, playerTurn, selectedCards, setSelectedCards, dispatch, style } : {
     player: Player,
     playerTurn: Player,
     selectedCards: Array<Card>,
     setSelectedCards: (cards: Array<Card>) => void
-    dispatch: (action: Action) => void
+    dispatch: (action: Action) => void,
+    style?: any
 }) => {
     const setSelected = (card: Card) => {
         if(selectedCards.includes(card)){
@@ -23,7 +24,7 @@ export const PlayerBoard = ({ player, playerTurn, selectedCards, setSelectedCard
 
     const selectedBoatCard = selectedCards.length === 1 && selectedCards[0].type === CardType.BOAT? selectedCards[0] as BoatCard : null; 
     const selectedCannons = selectedCards.filter( card => card.type === CardType.CANNON );
-    return <div key={player.name} className={`player ${playerTurn === player? "active": "inactive"}`}>
+    return <div key={player.name} className={`player ${playerTurn === player? "active": "inactive"}`} style={style}>
         <h2>{player.name}</h2>
         <div className="split">
             <div>

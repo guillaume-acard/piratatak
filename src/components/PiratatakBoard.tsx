@@ -8,6 +8,7 @@ import { Card, PirateCard, GoldCoinCard } from '../game/model/Card';
 import { CardSprite } from './CardSprite';
 import last from 'lodash/last';
 import { playPirate, playGold } from '../game/Sounds';
+import { PlayerList } from './PlayerList';
 
 export const PiratatakBoard = ({ gameEngine } : { gameEngine: GameEngine }) => {
     const [game, setGame] : [Game, any] = useState(gameEngine.game);
@@ -28,22 +29,17 @@ export const PiratatakBoard = ({ gameEngine } : { gameEngine: GameEngine }) => {
         }
     }, [game])
 
-    const playerTurnIndex = game.players.indexOf(game.playerTurn);
-    const dock =  playerTurnIndex < game.players.length / 2? "dock-right" : "dock-left";
-
     return <div className="game-board">
-        {game.winningPlayer && <div className="winning-player surface">{game.winningPlayer.name} WIN!!!</div>}
-        <div className="players">
-            {game.players.map( (player, i) => <PlayerBoard 
-                key={i} 
-                player={player} 
-                playerTurn={game.playerTurn} 
-                selectedCards={selectedCards} 
-                setSelectedCards={setSelectedCards}
-                dispatch={action => gameEngine.dispatch(action)}
-            />)}
-        </div>
-        {game.playerTurn.lastCardIsPirate() && <div className={`surface event-card ${dock}`}>
+        {game.winningPlayer && <div className="winning-player surface">
+            <img src={`${process.env.PUBLIC_URL}/img/win-captain.png`} />{game.winningPlayer.name} WIN!!!
+        </div>}
+        <PlayerList 
+            game={game}
+            selectedCards={selectedCards}
+            setSelectedCards={setSelectedCards}
+            dispatch={action => gameEngine.dispatch(action)}
+        />
+        {game.playerTurn.lastCardIsPirate() && <div className={`surface event-card`}>
             <h2>PIRATE!</h2>
             <CardSprite 
                 className="shake"
@@ -51,10 +47,9 @@ export const PiratatakBoard = ({ gameEngine } : { gameEngine: GameEngine }) => {
                 size="large"
             />
         </div>}
-        <GameDeckActionBar 
+        {!game.winningPlayer && <GameDeckActionBar 
             game={game}
             dispatch={action => gameEngine.dispatch(action)}
-            className={dock} 
-        />
+        />}
     </div>
 }

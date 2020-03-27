@@ -4,19 +4,19 @@ import { Card, CardType, BoatCard, PirateCard } from '../game/model/Card'
 import "./CardSprite.css"
 
 const getImagePath = (card: Card): string => {
-    if(card.type === CardType.CANNON) return "/img/cannon.png";
-    if(card.type === CardType.GOLD_COIN) return "/img/gold_coin.png";
-    if(card.type === CardType.DECK) return "/img/card_back.png";
-    if(card.type === CardType.EMPTY) return "/img/card_empty.jpg";
+    if(card.type === CardType.CANNON) return `${process.env.PUBLIC_URL}/img/cannon.png`;
+    if(card.type === CardType.GOLD_COIN) return `${process.env.PUBLIC_URL}/img/gold_coin.png`;
+    if(card.type === CardType.DECK) return `${process.env.PUBLIC_URL}/img/card_back.png`;
+    if(card.type === CardType.EMPTY) return `${process.env.PUBLIC_URL}/img/card_empty.jpg`;
     if(card.type === CardType.PIRATE){
         const pirateCard = card as PirateCard;
-        return `/img/pirate_${pirateCard.id}.png`;
+        return `${process.env.PUBLIC_URL}/img/pirate_${pirateCard.id}.png`;
     }
     if(card.type === CardType.BOAT){
         const boatCard = card as BoatCard;
-        return `/img/boat_${boatCard.color}_${boatCard.piece}.jpg`;
+        return `${process.env.PUBLIC_URL}/img/boat_${boatCard.color}_${boatCard.piece}.jpg`;
     } 
-    return "/img/card_back.png";
+    return `${process.env.PUBLIC_URL}/img/card_back.png`;
 }
 
 export const CardSprite = ({ card, 

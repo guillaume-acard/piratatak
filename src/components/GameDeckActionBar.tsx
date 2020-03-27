@@ -13,14 +13,12 @@ export const GameDeckActionBar = ({ game, dispatch, className } : {
     className?: string
 }) => {
     const [cardClicked, setCardClicked] = useState<Card|undefined>();
-    useKeyDown("Space", () => !game.playerTurn.lastCardIsPirate() && setCardClicked(last(game.deck)));
+    useKeyDown("Space", () => !cardClicked && !game.playerTurn.lastCardIsPirate() && setCardClicked(last(game.deck)));
 
-    const playerTurnIndex = game.players.indexOf(game.playerTurn);
-    const position =  playerTurnIndex < game.players.length / 2? { left: "80%" } : { left: "5%" };
-    return <div className={`game-deck surface ${className}`} style={position}>
+    return <div className={`game-deck surface ${className}`}>
         <div>
             <h4>Deck</h4>
-            <div className={`card-list vertical`}>
+            <div className={`card-list vertical fixed`}>
                 {game.deck.map( (card, i) => <DeckCard 
                     key={i}
                     card={card}

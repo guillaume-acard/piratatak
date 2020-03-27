@@ -1,6 +1,8 @@
 import React, { KeyboardEvent } from 'react'
 import { Card } from '../game/model/Card'
-import { CardSprite } from './CardSprite'
+import { CardSprite } from './CardSprite';
+
+import "./CardList.css";
 
 export const CardList = ({ 
     cards, 

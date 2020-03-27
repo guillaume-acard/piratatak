@@ -2,27 +2,29 @@
   text-align: center;
   height: 100vh;
 
-  background-image: url(/img/background-2.jpg);
+  background-image: url(./assets/background-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-h4{
-  font-size: 10pt;
-  font-weight: lighter;
-  margin-top: 0px;
 }
 
 h1{
   margin-top: 0px;
   font-size: 2.5em;
   padding-top: 10px;
+  margin-bottom: 0px;
 }
 
 h2{
   margin-top: 0px;
   font-size: 2em;
+}
+
+h4{
+  font-size: 10pt;
+  font-weight: lighter;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 button{
@@ -33,7 +35,7 @@ button{
   color: white;
   margin: 5px;
   font-weight: lighter;
-  background-image: url(/img/button-bg.png);
+  background-image: url(./assets/button-bg.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

@@ -1,71 +1,61 @@
+:root{
+    --player-width: 550px;
+    --player-shift: 200px;
+}
+
+.game-deck{
+    position: absolute;
+    bottom: 15px;
+    height: 240px;
+    display: flex;
+    transition: .2s ease;
+    padding: 5px 0px 0px 0px;
+    right: 15px;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 1100px) {
+    .game-deck{
+        height: 210px;
+    }
+    :root{
+        --player-width: 450px;
+        --player-shift: 80px;
+    }
+}
+
 .players{
     display: flex;
 }
 
 .player{
     margin: 2px;
-    padding: 10px 30px 10px 30px;
-    width: 100%;
+    padding: 10px 15px 10px 15px;
+    width: var(--player-width);
     transition: .2s ease;
-    background-image: url(/img/background-player.png);
+    background-image: url(../assets/background-player.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     background-color: transparent;
     filter: drop-shadow(0 0 6px rgba(0,0,0,0.4));
+    position: absolute;
+    opacity: 0.8;
+}
+
+.player:hover{
+    z-index: 9999!important;
+    opacity: 1;
 }
 
 .player.active{
     filter: drop-shadow(0 0 16px rgba(0,0,0,1));
-    width: 150%;
+    transform: scale(1);
+    opacity: 1;
 }
 
 .player.inactive{
-    width: 50%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.card-list{
-    position: relative;
-    height: 110px;
-    padding: 15px;
-    text-align: left;
-    padding-left: 30px;
-}
-
-.card-list .card{
-    margin-top: 7px;
-}
-
-.card-list .card.small:hover{
-    margin-top: 0px;
-    margin-bottom: -8px;
-    width: 80px;
-    height: 120px;
-}
-
-.player.inactive .card-list .card.small:hover{
-    width: 50px;
-    height: 75px;
-}
-
-.card-list.horizontal .card:nth-child(n+1) { 
-    margin-left: -25px; 
-    position: relative;
-    display: inline-block;
-}
-
-.card-list.horizontal:hover .card:nth-child(n+2) {
-    margin-left: 0px;
-}
-
-.card-list.vertical{
-    width: 100px;
-}
-
-.card-list.vertical .card{ 
-    position: absolute;
+    transform: scale(0.8);
 }
 
 .split{
@@ -75,38 +65,24 @@
 
 .surface{
     background: #cacaca;
-    padding: 40px;
     box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.62);
-}
-
-.game-deck{
-    position: absolute;
-    bottom: 5%;
-    height: 240px;
-    display: flex;
-    background-image: url(/img/background-deck.jpg);
+    background-image: url(../assets/background-deck.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: .2s ease;
-}
-
-.dock-right{
-    left: 80%;
-}
-
-.dock-left{
-    left: 5%
 }
 
 .event-card{
     position: absolute;
-    top: 10%;
-    background-image: url(/img/pirate-background.jpg);
+    top: 40px;
+    right: 20px;
+    background-image: url(../assets/pirate-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: darkred;
+    padding: 20px;
+    z-index: 9999;
 }
 
 .event-card .card{
@@ -116,7 +92,14 @@
 
 .winning-player{
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 100px;
     font-size: 30pt;
+    z-index: 9999;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.winning-player img{
+    vertical-align: middle;
 }
