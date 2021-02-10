@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/piratatak-build/static/css/main.0fa19d49.chunk.css",
-    "main.js": "/piratatak-build/static/js/main.607219ca.chunk.js",
-    "main.js.map": "/piratatak-build/static/js/main.607219ca.chunk.js.map",
-    "runtime-main.js": "/piratatak-build/static/js/runtime-main.0dd9dde6.js",
-    "runtime-main.js.map": "/piratatak-build/static/js/runtime-main.0dd9dde6.js.map",
-    "static/js/2.35bda51c.chunk.js": "/piratatak-build/static/js/2.35bda51c.chunk.js",
-    "static/js/2.35bda51c.chunk.js.map": "/piratatak-build/static/js/2.35bda51c.chunk.js.map",
-    "index.html": "/piratatak-build/index.html",
-    "precache-manifest.8898b02a859b5a806850b914dda65244.js": "/piratatak-build/precache-manifest.8898b02a859b5a806850b914dda65244.js",
-    "service-worker.js": "/piratatak-build/service-worker.js",
-    "static/css/main.0fa19d49.chunk.css.map": "/piratatak-build/static/css/main.0fa19d49.chunk.css.map",
-    "static/js/2.35bda51c.chunk.js.LICENSE.txt": "/piratatak-build/static/js/2.35bda51c.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/piratatak-build/static/media/background-2.da98f1f5.jpg",
-    "static/media/Piratatak.css": "/piratatak-build/static/media/pirate-background.4de58b05.jpg",
-    "static/media/index.css": "/piratatak-build/static/media/pirate-font.5743890c.ttf"
+    "main.css": "/piratatak/static/css/main.62967bb0.chunk.css",
+    "main.js": "/piratatak/static/js/main.0e0a6255.chunk.js",
+    "main.js.map": "/piratatak/static/js/main.0e0a6255.chunk.js.map",
+    "runtime-main.js": "/piratatak/static/js/runtime-main.a2771f50.js",
+    "runtime-main.js.map": "/piratatak/static/js/runtime-main.a2771f50.js.map",
+    "static/js/2.35bda51c.chunk.js": "/piratatak/static/js/2.35bda51c.chunk.js",
+    "static/js/2.35bda51c.chunk.js.map": "/piratatak/static/js/2.35bda51c.chunk.js.map",
+    "index.html": "/piratatak/index.html",
+    "precache-manifest.5e1e469ec46c287d83b42406208ad67c.js": "/piratatak/precache-manifest.5e1e469ec46c287d83b42406208ad67c.js",
+    "service-worker.js": "/piratatak/service-worker.js",
+    "static/css/main.62967bb0.chunk.css.map": "/piratatak/static/css/main.62967bb0.chunk.css.map",
+    "static/js/2.35bda51c.chunk.js.LICENSE.txt": "/piratatak/static/js/2.35bda51c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/piratatak/static/media/background-2.da98f1f5.jpg",
+    "static/media/Piratatak.css": "/piratatak/static/media/pirate-background.4de58b05.jpg",
+    "static/media/index.css": "/piratatak/static/media/pirate-font.5743890c.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.0dd9dde6.js",
+    "static/js/runtime-main.a2771f50.js",
     "static/js/2.35bda51c.chunk.js",
-    "static/css/main.0fa19d49.chunk.css",
-    "static/js/main.607219ca.chunk.js"
+    "static/css/main.62967bb0.chunk.css",
+    "static/js/main.0e0a6255.chunk.js"
   ]
 }
