@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://guillaume-acard.github.io/piratatak-build",
+  "homepage": "https://guillaume-acard.github.io/piratatak",
   "eslintConfig": {
     "extends": "react-app"
   },

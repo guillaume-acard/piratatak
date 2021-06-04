@@ -9,13 +9,13 @@ const hoNo = new Audio(`${process.env.PUBLIC_URL}/sounds/ho_no.m4a`);
 const gold = new Audio(`${process.env.PUBLIC_URL}/sounds/gold.m4a`);
 
 export const playPirate = (pirateNo: number) => {
-    // if(pirateNo % 2 === 0) pirate1.play();    
-    pirate2.play();    
+    if (pirateNo % 2 === 0) pirate1.play();
+    pirate2.play();
 }
 
 export const playCannon = () => {
-    if(cannonCount % 2 === 0) cannon1.play();
-    if(cannonCount % 2 === 1) cannon2.play();
+    if (cannonCount % 2 === 0) cannon1.play();
+    if (cannonCount % 2 === 1) cannon2.play();
     cannonCount++;
 }
 

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 // Hook
 export function useKeyDown(targetKeyCode: string, callback: () => void) {
     // If pressed key is our target key then set to true
-    function downHandler(e : KeyboardEvent) {
+    function downHandler(e: KeyboardEvent) {
         if (e.code === targetKeyCode) {
             callback();
         }
@@ -16,5 +16,5 @@ export function useKeyDown(targetKeyCode: string, callback: () => void) {
         return () => {
             window.removeEventListener('keydown', downHandler);
         };
-    }, []); // Empty array ensures that effect is only run on mount and unmount
+    }, [downHandler]); // Empty array ensures that effect is only run on mount and unmount
 }
